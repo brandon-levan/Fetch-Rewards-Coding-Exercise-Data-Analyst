@@ -4,6 +4,10 @@ Thank you for taking the time to review my exercise. **I've layed out the assign
 
 ## First: Review Existing Unstructured Data and Diagram a New Structured Relational Data Model
 
+If you want to embed images, this is how you do it:
+
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+
 ## Second: Write a Query that Directly Answers a Predetermined Question from a Business Stakeholder
 
 ## Third: Evaluate Data Quality Issues in the Data Provided
