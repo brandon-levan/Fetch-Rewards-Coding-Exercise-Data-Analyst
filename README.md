@@ -6,7 +6,7 @@ Thank you for taking the time to review my exercise. **I've layed out the assign
 
 If you want to embed images, this is how you do it:
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![Image of Yaktocat](https://github.com/brandon-levan/Fetch-Rewards-Coding-Exercise-Data-Analyst/blob/main/Requirement%201/Structured_Relational_Data_Model.png?raw=true)
 
 ## Second: Write a Query that Directly Answers a Predetermined Question from a Business Stakeholder
 
