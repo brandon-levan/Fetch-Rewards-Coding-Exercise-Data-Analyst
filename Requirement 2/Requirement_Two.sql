@@ -86,7 +86,6 @@ and a.rewardsReceiptStatus in ('FINISHED','REJECTED')
 group by 1,2,3,4,5
 )
 
--- brand_sales as (
 select name,
 round(sum(finalPrice),2) AS Total_Spend,
 sum(quantityPurchased) AS Total_Items_Purchased
