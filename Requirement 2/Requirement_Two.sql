@@ -71,7 +71,6 @@ sum(purchasedItemCount) AS Total_Items_Purchased
 from receipt_info
 group by 1
 
-
 /* -------------------
 SQL Query Below Answers Both Questions
 5. Which brand has the most spend among users who were created within the past 6 months?
