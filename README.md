@@ -10,6 +10,7 @@ The requirement was to review the unstructured JSON data and diagram a new struc
 
 ## Second: Write a Query that Directly Answers a Predetermined Question from a Business Stakeholder
 
+You can find these SQL queries for this assignment requirement in the ** [Requirement 2 Folder](https://github.com/brandon-levan/Fetch-Rewards-Coding-Exercise-Data-Analyst/blob/main/README.md)**. but I've also included all of the code and documentation below and in this repository for your reference. If you have any questions please, do not hestitate to reach out to me at brandon.levan1014@gmail.com :sunglasses:
 
 
 ## Third: Evaluate Data Quality Issues in the Data Provided
