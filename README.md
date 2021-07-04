@@ -52,6 +52,16 @@ select *
 from ranking
 where Brand_Ranking <= 5;
 ```
+| Date_Range        | Brand_Name            | Number_of_Scans | Brand_Ranking |
+|-------------------|-----------------------|-----------------|---------------|
+| Last Month        | NULL                  | 449             | 1             |
+| Month Before Last | NULL                  | 631             | 1             |
+| Month Before Last | Swanson               | 11              | 2             |
+| Month Before Last | Tostitos              | 11              | 2             |
+| Month Before Last | Cracker Barrel Cheese | 10              | 4             |
+| Month Before Last | Diet Chris Cola       | 4               | 5             |
+| Month Before Last | Prego                 | 4               | 5             |
+
 ## Questions 3 & 4 
 3. When considering average spend from receipts with 'rewardsReceiptStatus’ of ‘Accepted’ or ‘Rejected’, which is greater?
 4. When considering total number of items purchased from receipts with 'rewardsReceiptStatus’ of ‘Accepted’ or ‘Rejected’, which is greater?
@@ -77,6 +87,10 @@ sum(purchasedItemCount) AS Total_Items_Purchased
 from receipt_info
 group by 1;
 ```
+| Receipt_Status | Average_Spend_Per_Receipt | Total_Items_Purchased |
+|----------------|---------------------------|-----------------------|
+| Accepted       | 84.18                     | 8070                  |
+| Rejected       | 23.33                     | 173                   |
 
 ## Questions 5 & 6 
 5. Which brand has the most spend among users who were created within the past 6 months?
@@ -109,6 +123,21 @@ left join Fetch.brands b on a.barcode=b.barcode
 group by 1
 order by 3 desc;
 ```
+| name                  | Total_Spend | Total_Items_Purchased |
+|-----------------------|-------------|-----------------------|
+| NULL                  | 15738.23    | 3438                  |
+| Swanson               | 61.38       | 22                    |
+| Tostitos              | 76.67       | 22                    |
+| Cracker Barrel Cheese | 196.98      | 7                     |
+| Kettle Brand          | 11.07       | 3                     |
+| V8                    | 13.49       | 3                     |
+| Jell-O                | 4.99        | 2                     |
+| Cheetos               | 22.00       | 2                     |
+| Prego                 | 2.69        | 1                     |
+| Diet Chris Cola       | 2.69        | 1                     |
+| Grey Poupon           | 3.29        | 1                     |
+| Pepperidge Farm       | 3.00        | 1                     |
+| Quaker                | 3.99        | 1                     |
 
 ## Third: Evaluate Data Quality Issues in the Data Provided
 
