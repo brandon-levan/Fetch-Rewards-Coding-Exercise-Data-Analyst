@@ -4,7 +4,7 @@
 
 Hello Product/Business Team Lead,
 
-I'm working on a request that just came through, and I noticed a few data quality issues in our Receipts, Brands, and Users tables that could be of concern to us as we continue to scale up the number of receipts that are scanned and prcocessed. 
+I'm working on a request to determine the top brands for the last month by quantity of transactions and spend, and I noticed a few data quality issues in our Receipts, Brands, and Users tables that could be of concern to us as we continue to scale up the number of receipts that are scanned and prcocessed. 
 
 I'm will continue to dig into these data issues, but below is the current list of data quliaty issues I've uncovered, and I was hoping that you could answer a few questions that would help me resolve some of these issues and understand how big of a concern these issues are to you. 
 
@@ -22,5 +22,5 @@ I'm will continue to dig into these data issues, but below is the current list o
 
 
 
-Thank you,
+Thank you
 Brandon
