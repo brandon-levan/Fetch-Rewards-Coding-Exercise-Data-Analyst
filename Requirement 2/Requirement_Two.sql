@@ -1,4 +1,10 @@
 /* -------------------
+Below are the sql queries that answer all of the questions for requirement two of the assessment. 
+I cleaned the data using Python (see Jupyter Notebook file in Requirement 2 folder).
+
+
+
+---------------------
 SQL Query Below Answers Both Questions
 1. What are the top 5 brands by receipts scanned for most recent month?
 2. How does the ranking of the top 5 brands by receipts scanned for the recent month compare to the ranking for the previous month?
