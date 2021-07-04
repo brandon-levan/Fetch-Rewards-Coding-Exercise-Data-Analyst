@@ -1,10 +1,10 @@
 /* -------------------
-SQL Query Below Answers Both 
+SQL Query Below Answers Both Questions
 1. What are the top 5 brands by receipts scanned for most recent month?
 2. How does the ranking of the top 5 brands by receipts scanned for the recent month compare to the ranking for the previous month?
 -------------------- */
 
-WITH receipt_info as (
+with receipt_info as (
 SELECT b.name AS Brand_Name,
 case
 	WHEN a.dateScanned between DATE_SUB((select max(createDate) from Fetch.receipts), INTERVAL 1 MONTH) and (select max(createDate) from Fetch.receipts) THEN "Last Month"
@@ -36,10 +36,74 @@ from ranking
 where Brand_Ranking <= 5
 
 /* -------------------
-SQL Query Below Answers Both 
-1. What are the top 5 brands by receipts scanned for most recent month?
-2. How does the ranking of the top 5 brands by receipts scanned for the recent month compare to the ranking for the previous month?
+SQL Query Below Answers Both Questions
+3. When considering average spend from receipts with 'rewardsReceiptStatus’ of ‘Accepted’ or ‘Rejected’, which is greater?
+4. When considering total number of items purchased from receipts with 'rewardsReceiptStatus’ of ‘Accepted’ or ‘Rejected’, which is greater?
 -------------------- */
+
+with receipt_info as (
+select _id,
+totalSpent,
+purchasedItemCount,
+case
+	WHEN rewardsReceiptStatus = 'FINISHED' THEN "Accepted"
+    WHEN rewardsReceiptStatus = 'REJECTED' THEN "Rejected"
+	ELSE "Other" 
+end as Receipt_Status
+FROM Fetch.receipts 
+where rewardsReceiptStatus in ('FINISHED','REJECTED')
+group by 1,2,3,4
+)
+
+select Receipt_Status,
+round(avg(totalSpent),2) AS Average_Spend_Per_Receipt,
+sum(purchasedItemCount) AS Total_Items_Purchased
+from receipt_info
+group by 1
+
+
+/* -------------------
+SQL Query Below Answers Both Questions
+5. Which brand has the most spend among users who were created within the past 6 months?
+6. Which brand has the most transactions among users who were created within the past 6 months?
+-------------------- */
+
+WITH Test as (
+SELECT 
+a._id,
+a.barcode,
+a.quantityPurchased,
+a.finalPrice,
+case
+	WHEN rewardsReceiptStatus = 'FINISHED' THEN "Accepted"
+    WHEN rewardsReceiptStatus = 'REJECTED' THEN "Rejected"
+	ELSE "Other" 
+end as Receipt_Status
+FROM Fetch.receipts a 
+left join Fetch.users b on a.userId = b._id
+where b.createdDate > DATE_SUB((select max(createDate) from Fetch.receipts), INTERVAL 6 MONTH)
+and a.rewardsReceiptStatus in ('FINISHED','REJECTED')
+group by 1,2,3,4,5
+)
+
+-- brand_sales as (
+select name,
+round(sum(finalPrice),2) AS Total_Spend,
+sum(quantityPurchased) AS Total_Items_Purchased
+from Test a
+left join Fetch.brands b on a.barcode=b.barcode
+group by 1
+order by 3 desc
+
+
+
+
+
+
+
+
+
+
 
 
 
