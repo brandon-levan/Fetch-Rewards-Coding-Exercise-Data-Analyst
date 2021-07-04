@@ -53,12 +53,13 @@ where Brand_Ranking <= 5;
 4. When considering total number of items purchased from receipts with 'rewardsReceiptStatus’ of ‘Accepted’ or ‘Rejected’, which is greater?
 
 ```sql
+--assumption is that rewardsReceiptStatus = 'FINISHED' is the same as "Accepted"
 with receipt_info as (
 select _id,
 totalSpent,
 purchasedItemCount,
 case
-	WHEN rewardsReceiptStatus = 'FINISHED' THEN "Accepted"
+    WHEN rewardsReceiptStatus = 'FINISHED' THEN "Accepted"
     WHEN rewardsReceiptStatus = 'REJECTED' THEN "Rejected"
 	ELSE "Other" 
 end as Receipt_Status
