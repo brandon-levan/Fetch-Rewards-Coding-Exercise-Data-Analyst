@@ -20,15 +20,9 @@ With these data quality issues in mind, could you please help me understand,
 1. Who manages the brands table? I'd like to speak with the manager of that table in order to work with him or her to create a 1 to 1 list of brands and barcodes so that we don't run into more discrepencies down the line. Maybe we should do a reconciliation of this table monthly to ensure it's accurate? Additionally, the format of these barcodes are not consistent (e.g (041129412152, 2700719497082, 4067, B07BRRLSVC); maybe I can assist with creating a tool that flags barcodes when not entered in the correct format. 
 2. I've uncovered some outliers in the data, but I'd like to get a better understanding if the outliers I flagged are truely outliers? Are there certain thresholds in which Fetch considers a value an outlier? 
 3. How are users in the user table generated? I've uncovered some instances were there is a user in the receipts table that is not in the user table? Maybe these are some use cases in which users aren't properly being added to the user table. I would assume that the user needs to be created before they scan, but could you please confirm this?
-4. Lastly, one of the most concerning issues I uncovered were blank rewardsReceiptItemList, when there is an 
+4. Lastly, one of the most concerning issues I uncovered were blank rewardsReceiptItemList, when there is an receipt id generated? Do you know what the cause of this is?
 
-What do you need to know to resolve the data quality issues?
-What other information would you need to help you optimize the data assets you're trying to create?
-What performance and scaling concerns do you anticipate in production and how do you plan to address them?
-
-
-
-
+If it's easier for you, please let me know if you want to set some time up to review this note. I'll continue to look into these discrepencies and uncover more in the meantime, but your responses will help me determine the severity of these issues. 
 
 Thank you<br/>
 Brandon
