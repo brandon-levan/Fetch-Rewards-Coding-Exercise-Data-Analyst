@@ -17,7 +17,12 @@ I'm will continue to dig into these data issues, but below is the current list o
 * There are various types of barcode formats in receipts. For example, there are barcodes with varying lengths and data types (041129412152, 2700719497082, 4067, B07BRRLSVC)
 
 With these data quality issues in mind, could you please help me understand, 
-1. 
+1. Step 1
+2. Step 2
+
+What do you need to know to resolve the data quality issues?
+What other information would you need to help you optimize the data assets you're trying to create?
+What performance and scaling concerns do you anticipate in production and how do you plan to address them?
 
 
 
