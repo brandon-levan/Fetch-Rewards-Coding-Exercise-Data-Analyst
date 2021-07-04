@@ -68,7 +68,7 @@ SQL Query Below Answers Both Questions
 6. Which brand has the most transactions among users who were created within the past 6 months?
 -------------------- */
 
-WITH Test as (
+with receipt_info as (
 SELECT 
 a._id,
 a.barcode,
@@ -90,28 +90,9 @@ group by 1,2,3,4,5
 select name,
 round(sum(finalPrice),2) AS Total_Spend,
 sum(quantityPurchased) AS Total_Items_Purchased
-from Test a
+from receipt_info a
 left join Fetch.brands b on a.barcode=b.barcode
 group by 1
 order by 3 desc
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
