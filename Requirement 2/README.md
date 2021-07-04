@@ -40,6 +40,16 @@ select *
 from ranking
 where Brand_Ranking <= 5;
 ```
+| Date_Range        | Brand_Name            | Number_of_Scans | Brand_Ranking |
+|-------------------|-----------------------|-----------------|---------------|
+| Last Month        | NULL                  | 449             | 1             |
+| Month Before Last | NULL                  | 631             | 1             |
+| Month Before Last | Swanson               | 11              | 2             |
+| Month Before Last | Tostitos              | 11              | 2             |
+| Month Before Last | Cracker Barrel Cheese | 10              | 4             |
+| Month Before Last | Diet Chris Cola       | 4               | 5             |
+| Month Before Last | Prego                 | 4               | 5             |
+
 ## Questions 3 & 4 
 3. When considering average spend from receipts with 'rewardsReceiptStatus’ of ‘Accepted’ or ‘Rejected’, which is greater?
 4. When considering total number of items purchased from receipts with 'rewardsReceiptStatus’ of ‘Accepted’ or ‘Rejected’, which is greater?
