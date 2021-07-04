@@ -10,11 +10,10 @@ The requirement was to review the unstructured JSON data and diagram a new struc
 
 ## Second: Write a Query that Directly Answers a Predetermined Question from a Business Stakeholder
 
-You can find these SQL queries for this assignment requirement in the **[Requirement 2 Folder](https://github.com/brandon-levan/Fetch-Rewards-Coding-Exercise-Data-Analyst/blob/main/Requirement%202/Requirement_Two.sql)**. I've answered the six questions using only three queries. I've visualized the results below (which you can also find in the Requirement 2 folder.
+You can find these SQL queries for this assignment requirement in the **[Requirement 2 Folder](https://github.com/brandon-levan/Fetch-Rewards-Coding-Exercise-Data-Analyst/blob/main/Requirement%202/Requirement_Two.sql)**. I've answered the six questions using only three queries. I've visualized the results in the tables below (which you can also find in the Requirement 2 folder). 
 
 Below are the sql queries that answer all of the questions for requirement two of the assessment. 
-I cleaned the data using Python (see Jupyter Notebook file in Requirement 2 folder) and loaded into a local instance of MySQL database. 
- -- I imported the tables (Receipts, Users, and Users) into the Fetch schema
+I cleaned the data using **[Python](https://github.com/brandon-levan/Fetch-Rewards-Coding-Exercise-Data-Analyst/blob/main/Requirement%203/Fetch%20Rewards%20Assignment%20-%20Data%20Cleaning%20and%20Quality%20Issue%20Check.ipynb)**. From each of the JSONs (Users, Receipts, Brands), I generated a cleaned CSV and loaded them into a local instance of MySQL database for write these queries and produce results. I did both the data cleansing and data quality issue investiagation in the same notebook. 
 
 ## Questions 1 & 2 
 1. What are the top 5 brands by receipts scanned for most recent month?
