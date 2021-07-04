@@ -1,6 +1,10 @@
 /* -------------------
 Below are the sql queries that answer all of the questions for requirement two of the assessment. 
-I cleaned the data using Python (see Jupyter Notebook file in Requirement 2 folder).
+I cleaned the data using Python (see Jupyter Notebook file in Requirement 2 folder) and loaded into a local instance of MySQL database. 
+ -- I imported the tables (Receipts, Users, and Users) into the Fetch schema
+ -- 
+ --
+ --
 
 
 
