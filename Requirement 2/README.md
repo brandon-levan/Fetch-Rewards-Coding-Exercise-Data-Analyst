@@ -75,6 +75,10 @@ sum(purchasedItemCount) AS Total_Items_Purchased
 from receipt_info
 group by 1;
 ```
+| Receipt_Status | Average_Spend_Per_Receipt | Total_Items_Purchased |
+|----------------|---------------------------|-----------------------|
+| Accepted       | 84.18                     | 8070                  |
+| Rejected       | 23.33                     | 173                   |
 
 ## Questions 5 & 6 
 5. Which brand has the most spend among users who were created within the past 6 months?
@@ -107,3 +111,18 @@ left join Fetch.brands b on a.barcode=b.barcode
 group by 1
 order by 3 desc;
 ```
+| name                  | Total_Spend | Total_Items_Purchased |
+|-----------------------|-------------|-----------------------|
+| NULL                  | 15738.23    | 3438                  |
+| Swanson               | 61.38       | 22                    |
+| Tostitos              | 76.67       | 22                    |
+| Cracker Barrel Cheese | 196.98      | 7                     |
+| Kettle Brand          | 11.07       | 3                     |
+| V8                    | 13.49       | 3                     |
+| Jell-O                | 4.99        | 2                     |
+| Cheetos               | 22.00       | 2                     |
+| Prego                 | 2.69        | 1                     |
+| Diet Chris Cola       | 2.69        | 1                     |
+| Grey Poupon           | 3.29        | 1                     |
+| Pepperidge Farm       | 3.00        | 1                     |
+| Quaker                | 3.99        | 1                     |
