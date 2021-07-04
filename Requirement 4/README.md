@@ -1,6 +1,6 @@
 # Fourth: Communicate with Stakeholders
 
-## Subject : BLAH
+## Subject : Resolving Data Quality Issues and Concerns
 
 Hello Product/Business Team Lead,
 
@@ -16,7 +16,8 @@ I'm will continue to dig into these data issues, but below is the current list o
 * There are 148 User IDs in Receipts that do not have a matching User ID in the User table
 * There are various types of barcode formats in receipts. For example, there are barcodes with varying lengths and data types (041129412152, 2700719497082, 4067, B07BRRLSVC)
 
-
+With these data quality issues in mind, could you please help me understand, 
+1. 
 
 
 
